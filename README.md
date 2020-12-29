@@ -19,4 +19,9 @@
 
 > PHP es un lenguaje de progración para al web, específicamente diseñado para generar HTML a pedido.  
 > Se ejecuta del lado del server.
-> 
+
+## Carpeta de archivos:
+>    C:\\Xampp\htdocs\cursophp
+
+## En el navegador:
+>    localhost/cursophp

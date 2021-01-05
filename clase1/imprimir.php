@@ -13,5 +13,13 @@
     echo '<br>';
     echo 'imprimiendo cadenas de texto';
 ?>
+<hr>
+<?php
+    $numero = 120;
+?>
+<?php echo $numero; ?>
+    <?= $numero; ?>
+
+
 </body>
 </html>

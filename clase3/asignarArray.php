@@ -14,6 +14,20 @@
         print_r($alemanes);
         echo '</pre>';
     ?>
+        <br>
+    <?php
+        $moviles = [
+                    'Motorola'=>'Moto G',
+                    'Samsung'=>'S20',
+                    'iPhone'=>'Pro 12',
+                    'Xiaomi'=>'MI 9',
+                    'Huawei'=>'Prolite',
+                    'Güindous'=>'foun'
+                ];
+        echo '<pre>';
+        print_r($moviles);
+        echo '</pre>';
+    ?>
     </div>
 </body>
 </html>

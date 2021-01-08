@@ -17,6 +17,8 @@
 					"tuk-tuk",
 					"wat-saket"
 					 ];
+	$cantidad = count($locacion);
+    $n = 0;
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,11 @@
 	<meta charset="utf-8">
 	<title>Tailandia</title>
 	<style type="text/css">
-		body{font-family: helvetica; color: #52BAE0}
+		body{ width: 900px;
+            margin: auto;
+            font-family: helvetica;
+            color: #52BAE0
+        }
 		.contenedor{
 			width:100px; 
 			padding:5px; 
@@ -41,11 +47,18 @@
 
 	<h1>Tailandia</h1>
 
+    <?php
+        while ( $n < $cantidad ){
+    ?>
 	<article class="contenedor">
-        <img src="tailandia/muestra.png">
+        <img src="tailandia/<?= $locacion[$n] ?>.jpg">
 		<br>
-		<h2>Locación</h2>
+		<h2><?= $locacion[$n] ?></h2>
 	</article>
+    <?php
+            $n++;
+        }
+    ?>
 
 </body>
 </html>

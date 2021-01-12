@@ -5,7 +5,6 @@
                 'naranja', 'celeste'
             ];
     $cantidad = count($colores);
-    $i = 0;
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,15 +28,14 @@
 <body>
     <h1>muestra de colores</h1>
     <div id="contenedor">
+
 <?php
-        while( $i < $cantidad ){
+    for( $i = 0; $i < $cantidad; $i++ ){
 ?>
-            <img src="imagenes/<?= $colores[$i] ?>.png">
-            color <?= $colores[$i] ?>
-            <br>
+        <img src="imagenes/<?= $colores[$i]; ?>.png">
+        color <?= $colores[$i]; ?>
 <?php
-            $i++;
-        }
+    }
 ?>
     </div>
 

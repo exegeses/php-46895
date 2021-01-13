@@ -1,11 +1,13 @@
 <?php
 
     //declaración
-    function negrita( $frase ){
+    function negrita( $frase )
+    {
         return '<b>'. $frase. '</b><br>';
     }
 
-    function sumar( $nro1, $nro2 ){
+    function sumar( $nro1, $nro2 )
+    {
         $resultado = $nro1 + $nro2;
         return $resultado;
     }

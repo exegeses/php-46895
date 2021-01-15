@@ -2,8 +2,8 @@
 
         require 'conexion.php';
         $link = conectar();
-        $sql = "SELECT idCategoria, catNombre 
-                        FROM categorias";
+        $sql = "SELECT idMarca, mkNombre 
+                        FROM marcas";
         $resultado = mysqli_query($link, $sql);
 ?>
 <!doctype html>
@@ -16,16 +16,16 @@
     </head>
     <body>
         <main class="container">
-            <h1>Listado de categorías</h1>
+            <h1>Listado de marcas</h1>
 
             <div class="list-group col-4">
         <?php
-            while ( $categoria = mysqli_fetch_assoc($resultado) ) {
+            while ( $marca = mysqli_fetch_assoc($resultado) ) {
         ?>
                 <span class="list-group-item list-group-item-action">
-                    <?= $categoria['idCategoria'] ?>
+                    <?= $marca['idMarca'] ?>
                     -
-                    <?= $categoria['catNombre'] ?>
+                    <?= $marca['mkNombre'] ?>
                 </span>
         <?php
             }

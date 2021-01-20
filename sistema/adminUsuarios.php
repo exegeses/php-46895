@@ -1,5 +1,8 @@
 <?php  
-	
+
+    require 'funciones/conexion.php';
+    require 'funciones/usuarios.php';
+    $usuarios = listarUsuarios();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -26,11 +29,14 @@
                 </tr>
             </thead>
             <tbody>
+<?php
+            while ( $usuario = mysqli_fetch_assoc( $usuarios ) ) {
+?>
                 <tr>
-                    <td>1</td>
-                    <td>nombre</td>
-                    <td>apell</td>
-                    <td>email</td>
+                    <td><?= $usuario['idUsuario'] ?></td>
+                    <td><?= $usuario['usuNombre'] ?></td>
+                    <td><?= $usuario['usuApellido'] ?></td>
+                    <td><?= $usuario['usuEmail'] ?></td>
                     <td>
                         <a href="" class="btn btn-outline-secondary">
                             Modificar
@@ -42,6 +48,9 @@
                         </a>
                     </td>
                 </tr>
+<?php
+            }
+?>
             </tbody>
         </table>
 

@@ -7,7 +7,7 @@
     <main class="container">
         <h1>Alta de una categoría</h1>
 
-        <div class="alert bg-light p-4 col-8 mx-auto border shadow-sm">
+        <div class="alert bg-light p-4 col-8 mx-auto border shadow">
             <form action="agregarCategoria.php" method="post">
                 <div class="form-group">
                     <label for="catNombre">Nombre de la Categoría</label>

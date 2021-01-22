@@ -20,7 +20,7 @@
                     <th>ID</th>
                     <th>Categoría</th>
                     <th colspan="2">
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formAgregarCategoria.php" class="btn btn-outline-secondary">
                             Agregar
                         </a>
                     </th>

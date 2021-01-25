@@ -1,3 +1,4 @@
+<header class="bg-dark mb-3 shadow-sm border-bottom border-light">
 <nav class="site-header sticky-top py-2">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a href="index.php" class="mt-1">
@@ -28,3 +29,4 @@
         </button>
     </div>
 </nav>
+</header>

@@ -11,7 +11,7 @@
             <form action="agregarMarca.php" method="post">
                 <div class="form-group">
                     <label for="mkNombre">Nombre de la Marca</label>
-                    <input type="text" name="MkNombre"
+                    <input type="text" name="mkNombre"
                            class="form-control" id="MkNombre" required>
                 </div>
 

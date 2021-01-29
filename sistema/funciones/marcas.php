@@ -29,6 +29,7 @@
                             or die( mysqli_error($link) );
         return $resultado;
     }
+
     /*
      * listarMarcas()
      * verMarcaPorID()

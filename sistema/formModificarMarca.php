@@ -1,5 +1,8 @@
 <?php  
-	
+
+    require 'funciones/conexion.php';
+    require 'funciones/marcas.php';
+    $marca = verMarcaPorID();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>
@@ -12,8 +15,11 @@
                 <div class="form-group">
                     <label for="mkNombre">Nombre de la Marca</label>
                     <input type="text" name="mkNombre"
+                           value="<?= $marca['mkNombre'] ?>"
                            class="form-control" id="MkNombre" required>
                 </div>
+                <input type="hidden" name="idMarca"
+                       value="<?= $marca['idMarca'] ?>">
 
                 <button class="btn btn-dark my-3 mr-3 px-4">Modificar marca</button>
                 <a href="adminMarcas.php" class="btn btn-outline-secondary">

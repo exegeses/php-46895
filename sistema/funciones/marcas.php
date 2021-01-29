@@ -30,6 +30,24 @@
         return $resultado;
     }
 
+    /**
+     * función para ver una marca por su id
+     * @return array:$marca
+     */
+    function verMarcaPorID()
+    {
+        $idMarca = $_GET['idMarca'];
+        $link = conectar();
+        $sql = "SELECT idMarca, mkNombre
+                    FROM marcas
+                    WHERE idMarca = ".$idMarca;
+        $resultado = mysqli_query($link, $sql)
+                                or die( mysqli_error($link) );
+        $marca = mysqli_fetch_assoc($resultado);
+        return $marca;
+    }
+
+
     /*
      * listarMarcas()
      * verMarcaPorID()

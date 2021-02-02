@@ -73,6 +73,7 @@
                             ".$idMarca.",
                             ".$idCategoria.",
                             '".$prdPresentacion."',
+                            ".$prdStock.",
                             '".$prdImagen."'
                         )";
 

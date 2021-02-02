@@ -13,6 +13,8 @@
         return $resultado;
     }
 
+
+
     /*
      * listarUsuarios()
      * verUsuarioPorID()

@@ -26,9 +26,13 @@
     function subirArchivo()
     {
 
-        ##  si no enviaron archivo
+        ##  si no enviaron archivo en formAgregar
         $prdImagen = 'noDisponible.jpg';
 
+        ## si no enviaron archivo en formModificar
+        if( isset( $_POST['imgActual']) ){
+            $prdImagen = $_POST['imgActual'];
+        }
         ## si enviaron archivo y esta todo ok
         if( $_FILES['prdImagen']['error'] == 0 ){
 
@@ -108,5 +112,30 @@
 
     function modificarProducto()
     {
+        // capturamos datos enviados por el form
+        $prdNombre = $_POST['prdNombre'];
+        $prdPrecio = $_POST['prdPrecio'];
+        $idMarca = $_POST['idMarca'];
+        $idCategoria = $_POST['idCategoria'];
+        $prdPresentacion = $_POST['prdPresentacion'];
+        $prdStock = $_POST['prdStock'];
+        $prdImagen = subirArchivo();
+        $idProducto = $_POST['idProducto'];
+
+        $link = conectar();
+        $sql = "UPDATE productos 
+                    SET
+                        prdNombre = '".$prdNombre."',
+                        prdPrecio = ".$prdPrecio.",
+                        idMarca = ".$idMarca.",
+                        idCategoria = ".$idCategoria.",
+                        prdPresentacion = '".$prdPresentacion."',
+                        prdStock = ".$prdStock.",
+                        prdImagen = '".$prdImagen."'
+                 WHERE  idProducto = ".$idProducto;
+
+        $resultado = mysqli_query($link, $sql)
+                        or die( mysqli_error($link) );
+        return $resultado;
 
     }

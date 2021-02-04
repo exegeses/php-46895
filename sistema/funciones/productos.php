@@ -139,3 +139,18 @@
         return $resultado;
 
     }
+
+    /**
+     * función para eliminar datos de un producto
+     * @return $resultado:bool
+     */
+    function eliminarProducto()
+    {
+        $idProducto = $_POST['idProducto'];
+        $link = conectar();
+        $sql = "DELETE productos
+                  WHERE idProducto = ".$idProducto;
+        $resultado = mysqli_query($link, $sql)
+                           or die(mysqli_error($link));
+        return $resultado;
+    }

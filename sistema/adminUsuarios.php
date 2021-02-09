@@ -22,7 +22,7 @@
                     <th>Apellido</th>
                     <th>Email</th>
                     <th colspan="2">
-                        <a href="" class="btn btn-outline-secondary">
+                        <a href="formAgregarUsuario.php" class="btn btn-outline-secondary">
                             Agregar
                         </a>
                     </th>

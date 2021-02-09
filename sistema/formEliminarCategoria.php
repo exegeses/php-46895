@@ -10,7 +10,7 @@
     <main class="container">
         <h1>baja de un categoría</h1>
 
-        <article class="card border-danger col-6 mx-auto">
+        <article class="card  text-danger border-danger col-6 mx-auto p-4">
 <?php
         // si la cantidad es > que 0
         if( $cantidad > 0 ){
@@ -31,7 +31,7 @@
                 <input type="hidden" name="idCategoria"
                        value="<?= $categoria['idCategoria'] ?>">
                 <br>
-                <button class="btn btn-danger btn-block my-3">
+                <button class="btn btn-danger my-3 btn-block">
                     Confirmar baja
                 </button>
             </form>

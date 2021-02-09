@@ -56,8 +56,22 @@
         return  $cantidad;
     }
 
-
-
+    /**
+     * función para modificar una categoría
+     * @return $resultado:bool
+     */
+    function modificarCategoria()
+    {
+        $idCategoria = $_POST['idCategoria'];
+        $catNombre = $_POST['catNombre'];
+        $link = conectar();
+        $sql = "UPDATE categorias
+                        SET catNombre = '".$catNombre."'
+                        WHERE idCategoria = ".$idCategoria;
+        $resultado = mysqli_query($link, $sql)
+                        or die(mysqli_error($link));
+        return $resultado;
+    }
     /*
      * listarCategorias()
      * verCategoriaPorID()

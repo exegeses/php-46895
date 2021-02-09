@@ -48,7 +48,7 @@
     }
 
     /**
-     * función àra modificar una marca
+     * función para modificar una marca
      * @return $resultado:bool
     */
     function modificarMarca()

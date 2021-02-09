@@ -13,7 +13,6 @@
                 <input type="email" name="usuEmail"
                        class='form-control' id="usuEmail" required>
                 <br>
-                <br>
                 <label for="usuPass">Contraseña</label>
                 <input type="password" name="usuPass"
                        class='form-control' id="usuPass" required>
@@ -24,6 +23,17 @@
             </form>
         </div>
 
+<?php
+        //si se logueó mal
+        if ( isset( $_GET['error'] ) ){
+        //$error = $_GET['error'];
+?>
+        <div class="alert alert-danger p-4 col-8 mx-auto">
+            Usuario y/o contraseña incorrectas
+        </div>
+<?php
+        }
+?>
     </main>
 
 <?php  include 'includes/footer.php';  ?>

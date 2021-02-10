@@ -1,5 +1,7 @@
 <?php  
-	
+	session_start();
+	require 'funciones/autenticar.php';
+	    autenticar();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>

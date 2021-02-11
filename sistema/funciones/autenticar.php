@@ -34,8 +34,12 @@
 
     function logout()
     {
+        $usuario = $_SESSION['usuario'];
         session_unset();
         session_destroy();
+        //redirección con demora
+        header('refresh:3;url=index.php');
+        return $usuario;
 
     }
 

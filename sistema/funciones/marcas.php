@@ -81,7 +81,22 @@
         $cantidad = mysqli_num_rows($resultado);
         return  $cantidad;
     }
-    
+
+    /**
+     * Función para eliminar una marca
+     * @return bool|mysqli_result
+     */
+    function eliminarMarca()
+    {
+        $idMarca = $_POST['idMarca'];
+        $link = conectar();
+        $sql = "DELETE marcas 
+                    WHERE idMarca = ".$idMarca;
+        $resultado = mysqli_query($link, $sql)
+            or die(mysqli_error($link));
+        return $resultado;
+    }
+
     /*
      * listarMarcas()
      * verMarcaPorID()

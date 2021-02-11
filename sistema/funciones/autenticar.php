@@ -40,7 +40,6 @@
         //redirección con demora
         header('refresh:3;url=index.php');
         return $usuario;
-
     }
 
     function autenticar()

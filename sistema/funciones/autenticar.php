@@ -22,6 +22,11 @@
         else{
             ###### RUTINA DE AUTENTICACIÓN
             $_SESSION['login'] = 1;
+                #obtenemos y almacenamos datos del usuario
+                $usuario = mysqli_fetch_assoc($resultado);
+                //$_SESSION['usuNombre'] = $usuario['usuNombre'];
+                //$_SESSION['usuApellido'] = $usuario['usuApellido'];
+                $_SESSION['usuario'] = $usuario['usuNombre'].' '.$usuario['usuApellido'];
             //redirección a admin
             header('location: admin.php');
         }

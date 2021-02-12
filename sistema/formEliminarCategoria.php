@@ -2,7 +2,7 @@
 
     require 'funciones/conexion.php';
     require 'funciones/categorias.php';
-    $cantidad = verificarProducto();
+    $cantidad = verificarProductoC();
 	include 'includes/header.html';  
 	include 'includes/nav.php';  
 ?>

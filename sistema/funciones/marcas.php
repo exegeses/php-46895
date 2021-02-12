@@ -70,7 +70,7 @@
      * @return bool
      *
      */
-    function verificarProducto()
+    function verificarProductoM()
     {
         $idMarca = $_GET['idMarca'];
         $link = conectar();

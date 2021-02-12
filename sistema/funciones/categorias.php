@@ -44,7 +44,7 @@
      * @return bool
      *
     */
-    function verificarProducto()
+    function verificarProductoC()
     {
         $idCategoria = $_GET['idCategoria'];
         $link = conectar();
